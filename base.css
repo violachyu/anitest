@@ -228,6 +228,11 @@ a {
   transform-origin: 50% 0%;
 }
 
+.scene img {
+  margin: 90vh 0 0 0;
+  
+}
+
 .carousel {
   width: 400px;
   height: 500px;
