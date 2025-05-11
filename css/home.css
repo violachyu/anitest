@@ -94,8 +94,8 @@ body {
 .mockup-slider {
 	position: relative;
 	/* width: calc(100% - 12em); */
-	margin: 0 0 0 0em;
-	max-width: 600px;
+	/* margin: 0 0 0 0em; */
+	/* max-width: 600px; */
 }
 
 .mockup-slider::before,
@@ -123,11 +123,21 @@ body {
 
 .mockup-slider__title {
 	/* position: absolute; */ /* Edit: Display title in the center */ 
-	font-size: 3em;
-	bottom: 30%;
-	left: -0.5em;
-	font-weight: 200;
-	margin: 0;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: bold;
+	display: block;
+	text-align: right;
+	white-space: nowrap;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #ffe7db;
+	
+	font-size: 3em; /*TODO: Change Font Size*/
+	/* bottom: 30%; */
+	/* left: -0.5em; */
+	/* font-weight: 200; */
+	/* margin: 0; */
+	/* padding: 0; */
 }
 
 /* .mockup-slider__subtitle {
