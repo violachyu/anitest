@@ -64,27 +64,63 @@ const initApp = async () => {
 
     // Generate previews
     const previewsContainer = document.getElementById('previews-container');
+
     previews.forEach(preview => {
       const previewDiv = document.createElement('div');
-      previewDiv.className = 'preview';
-      previewDiv.id = preview.id;
       
-      previewDiv.innerHTML = `
-        <header class="preview__header">
-          <h2 class="preview__title"><span>${preview.title}</span></h2>
-          <button class="preview__close">Close ×</button>
-        </header>
-        <div class="grid">
-          ${preview.images.map((image, index) => `
-            <figure aria-labelledby="caption${index + 1}" class="grid__item" role="img">
-              <div class="grid__item-image" style="background-image: url(${image.img})"></div>
-              <figcaption class="grid__item-caption" id="caption${index + 1}">
-                <h3>${image.caption}</h3>
-              </figcaption>
-            </figure>
-          `).join('')}
-        </div>
-      `;
+      // Custom Preview - About Me
+      if (preview.id === 'preview-1') {
+        previewDiv.className = 'preview__custom';
+        previewDiv.id = preview.id;
+
+        const aboutCaption = `Former nurse turned full-stack developer, now revolutionizing aging through playful AgeTech. 
+        I'm building a future where getting older feels like leveling up - by injecting gamification into our aging society.
+        \nBy day, I code. By night, I chase that perfect jazz resonance where voice and body become one. 
+        \nThrough music and tech, I create experiences that move both body and soul.Let's compose the soundtrack for better aging together. 
+        \nHit reply if you're into:
+        \n→ AgeTech innovation
+        \n→ Human-centered design
+        \n→ Music that makes tech sing`;
+        const aboutTitle = "About Me";
+
+        previewDiv.innerHTML = `
+            <header class="preview__header">
+              <h2 class="preview__title"><span>${aboutTitle}</span></h2>
+              <button class="preview__close">Close ×</button>
+            </header>
+            <div class="grid__custom">
+              <figure  class="grid__custom__item" role="img">
+                <div class="grid__custom__item-image" style="background-image: url(assets/intro_2.jpg)"></div>
+                <figcaption class="">
+                  <p class="grid__custom__item-text">${aboutCaption}</p>
+                </figcaption>
+              </figure>
+            </div>
+        `;
+      } else {
+        previewDiv.className = 'preview';
+        previewDiv.id = preview.id;
+
+        // General Preview Template with 8 Grids
+        previewDiv.innerHTML = `
+          <header class="preview__header">
+            <h2 class="preview__title"><span>${preview.title}</span></h2>
+            <button class="preview__close">Close ×</button>
+          </header>
+          <div class="grid">
+            ${preview.images.map((image, index) => `
+              <figure aria-labelledby="caption${index + 1}" class="grid__item" role="img">
+                <div class="grid__item-image" style="background-image: url(${image.img})"></div>
+                <figcaption class="grid__item-caption" id="caption${index + 1}">
+                  <h3>${image.caption}</h3>
+                </figcaption>
+              </figure>
+            `).join('')}
+          </div>
+        `;
+
+      }
+
       
       previewsContainer.appendChild(previewDiv);
     });
