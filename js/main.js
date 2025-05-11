@@ -344,7 +344,7 @@ const animateGridItems = ({ items, centerX, centerY, direction = 'in', onComplet
  * Animates all grid items in the preview into view
  */
 const animatePreviewGridIn = (preview) => {
-  const items = preview.querySelectorAll('.grid__item');
+  const items = preview.querySelectorAll('.grid__item, .grid__custom__item');
   gsap.set(items, { clearProps: 'all' });
   animateGridItems({
     items,
@@ -358,7 +358,7 @@ const animatePreviewGridIn = (preview) => {
  * Animates all grid items in the preview out of view
  */
 const animatePreviewGridOut = (preview) => {
-  const items = preview.querySelectorAll('.grid__item');
+  const items = preview.querySelectorAll('.grid__item, .grid__custom__item');
   const onComplete = () =>
     gsap.set(preview, { pointerEvents: 'none', autoAlpha: 0 });
   animateGridItems({
@@ -491,7 +491,7 @@ const deactivatePreviewToCarousel = (e) => {
   if (isAnimating) return;
   isAnimating = true;
 
-  const preview = e.currentTarget.closest('.preview');
+  const preview = e.currentTarget.closest('.preview, .preview__custom');
   if (!preview) return;
 
   const { carousel, cards, chars } = getSceneElementsFromPreview(preview);
