@@ -47,26 +47,57 @@
 
 		var left = document.querySelector(".left");
 		var right = document.querySelector(".right");
-		var container = document.querySelector(".swipebox");
+		// var container = document.querySelector(".swipebox");
 
-		if (left && right && container) {
-			left.addEventListener("mouseenter", function() {
-				container.classList.add("hover-left");
-			});
-
-			// Uncomment if you want the effect to disappear on mouse leave
-			// left.addEventListener("mouseleave", function() {
-			//   container.classList.remove("hover-left");
+		// if (left && right && container) {
+			// left.addEventListener("mouseenter", function() {
+			// 	container.classList.add("hover-left");
 			// });
 
-			right.addEventListener("mouseenter", function() {
-				container.classList.add("hover-right");
-			});
+		// 	// Uncomment if you want the effect to disappear on mouse leave
+		// 	// left.addEventListener("mouseleave", function() {
+		// 	//   container.classList.remove("hover-left");
+		// 	// });
 
-			// Uncomment if you want the effect to disappear on mouse leave
-			// right.addEventListener("mouseleave", function() {
-			//   container.classList.remove("hover-right");
-			// });
+		// 	right.addEventListener("mouseenter", function() {
+		// 		container.classList.add("hover-right");
+		// 	});
+
+		// 	// Uncomment if you want the effect to disappear on mouse leave
+		// 	// right.addEventListener("mouseleave", function() {
+		// 	//   container.classList.remove("hover-right");
+		// 	// });
+		// }
+
+		var swipeBtn = document.querySelectorAll('.swipebtn');
+		var backBtn = document.querySelector('.backbtn');
+		var container = document.querySelector('.swipebox');
+
+		if (left && right && swipeBtn.length && container) {
+			swipeBtn.forEach(function(swipeBtn) {
+				swipeBtn.addEventListener('click', function() {
+					// Add the hover-left class to the container
+					container.classList.add('hover-right');
+					// Remove the hover-right class if it exists
+					container.classList.remove('hover-left');
+					// Toggle between left and right effects
+					// if (container.classList.contains('hover-left')) {
+					// 	container.classList.remove('hover-left');
+					// 	container.classList.add('hover-right');
+					// } else if (container.classList.contains('hover-right')){
+					// 	container.classList.remove('hover-right');
+					// 	container.classList.add('hover-left');
+					// } else {
+					// 	container.classList.add('hover-left');
+					// }
+				});
+			});
+			
+			backBtn.addEventListener('click', function() {
+				// Remove both classes to reset the effect
+				container.classList.add('hover-left');
+				container.classList.remove('hover-right');
+			});
 		}
 	}
 
