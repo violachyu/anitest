@@ -93,8 +93,8 @@ body {
 /* Mockup Slider */
 .mockup-slider {
 	position: relative;
-	width: calc(100% - 12em);
-	margin: 0 0 0 2em;
+	/* width: calc(100% - 12em); */
+	margin: 0 0 0 0;
 	max-width: 600px;
 }
 
@@ -122,11 +122,11 @@ body {
 }
 
 .mockup-slider__title {
-	position: absolute;
-	font-size: 3em;
+	/* position: absolute; */ /* Edit: Display title in the center */ 
+	/* font-size: 3em; */
 	bottom: 30%;
 	left: -0.5em;
-	font-weight: normal;
+	/* font-weight: 200; */
 	margin: 0;
 }
 

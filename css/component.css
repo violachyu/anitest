@@ -993,7 +993,7 @@
 	font-family: 'Roboto Condensed', sans-serif;
 	font-weight: bold;
 	display: block;
-	padding: 0 0 0 0.3em; /* if title too close to slider, adjust this*/
+	padding: 0 0 0 0.75em; /* TODO: if title too close to slider, adjust this*/
 	text-align: left;
 	white-space: nowrap;
 	letter-spacing: 2px;
