@@ -73,14 +73,16 @@ const initApp = async () => {
         previewDiv.className = 'preview__custom';
         previewDiv.id = preview.id;
 
-        const aboutCaption = `Former nurse turned full-stack developer, now revolutionizing aging through playful AgeTech. 
-        I'm building a future where getting older feels like leveling up - by injecting gamification into our aging society.
-        \nBy day, I code. By night, I chase that perfect jazz resonance where voice and body become one. 
-        \nThrough music and tech, I create experiences that move both body and soul.Let's compose the soundtrack for better aging together. 
-        \nHit reply if you're into:
-        \n→ AgeTech innovation
-        \n→ Human-centered design
-        \n→ Music that makes tech sing`;
+        const aboutCaption = `Former nurse turned full-stack developer, now revolutionizing aging through playful <b>AgeTech</b>.<br>
+        I'm building a future where getting older feels like leveling up - by injecting gamification into our aging society.<br>
+        <br>
+        By day, I code. By night, I chase that perfect jazz resonance where voice and body become one.<br>
+        Through music and tech, I create experiences that move both body and soul. Let's compose the soundtrack for better aging together.<br>
+        Hit reply if you're into:<br>
+        <br>
+        → <b>AgeTech</b> innovation<br>
+        → Human-centered design<br>
+        → Music that makes tech sing`;
         const aboutTitle = "About Me";
 
         previewDiv.innerHTML = `
