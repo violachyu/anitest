@@ -9,5 +9,16 @@
         {"img": "assets/img3.webp"},
         {"img": "assets/img4.webp"}
       ]
+    },
+    {
+      "id": "preview-2",
+      "title": "Haute Couture Nights — Paris",
+      "radius": null,
+      "cells": [
+        {"img": "assets/img5.webp"},
+        {"img": "assets/img6.webp"},
+        {"img": "assets/img7.webp"},
+        {"img": "assets/img8.webp"}
+      ]
     }
   ]

@@ -3,11 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <title>On-Scroll 3D Carousel | Codrops</title>
+  <title>VIOLA's PORTFOLIO</title>
   <meta content="Codrops" name="author" />
-  <link href="https://tympanus.net/favicon/favicon.svg" rel="icon" type="image/svg+xml" />
-  <link href="https://tympanus.net/favicon/favicon.ico" rel="shortcut icon" />
+  <!-- <link href="https://tympanus.net/favicon/favicon.svg" rel="icon" type="image/svg+xml" /> -->
+  <link href="./assets/new-moon.png" rel="shortcut icon" />
   <link href="https://use.typekit.net/ccs0evy.css" rel="stylesheet" />
+  <link href="css/home.css" rel="stylesheet" type="text/css" />
+  <link href="css/component.css" rel="stylesheet" type="text/css" />
+  <link href="css/swipe.css" rel="stylesheet" type="text/css" />
+  <link href="css/hidden.css" rel="stylesheet" type="text/css" />
+
   <link href="base.css" rel="stylesheet" type="text/css" />
   <script>
     document.documentElement.className = 'js';
@@ -15,7 +20,7 @@
 </head>
 <body class="loading">
   <header class="frame">
-    <h1 class="frame__title">On-Scroll 3D Carousel</h1>
+    <h1 class="frame__title">VIOLA CHYU's PORTFOLIO</h1>
     <nav class="frame__links">
       <a class="line" href="https://tympanus.net/codrops/?p=93330">Article</a>
       <a class="line" href="https://github.com/codrops/3DCarousel/">Code</a>
@@ -28,13 +33,61 @@
     </nav>
   </header>
   
+
+  
   <main id="smooth-content">
-    <div class="scene-wrapper" id="carousels-container"></div>
+    <div class="scene-wrapper" id="carousels-container">
+      <div class="scene">
+      <!-- Main Page -->
+        <div class="swipebox">
+          <div class="split left">
+                <section class="section section--nav" id="Berta">
+                <span class="link-copy"></span>
+                <nav class="nav nav--berta">
+                    <button class="nav__item nav__item--current" aria-label="Item 2">
+                      <span class="nav__item-inner"></span>
+                      <span class="nav__item-title">About Me</span>
+                    </button>
+                    <button class="nav__item" data-toggle-visible='project-page' aria-label="Item 1">
+                      <span class="nav__item-title">Projects</span>
+                    </button>
+                    <!-- <button class="nav__item" aria-label="Item 3"><span class="nav__item-title">Projects</span></button> -->
+                    <!-- <button class="nav__item" aria-label="Item 4"><span class="nav__item-title">Captive #3068</span></button>
+                    <button class="nav__item" aria-label="Item 5"><span class="nav__item-title">Captive #3069</span></button>
+                    <button class="nav__item" aria-label="Item 6"><span class="nav__item-title">Captive #3070</span></button>
+                    <button class="nav__item" aria-label="Item 7"><span class="nav__item-title">Captive #3071</span></button> -->
+                </nav>
+                <!-- Mockup slider for decorative purpose only -->
+                <div class="section section--intro mockup-slider">
+                    <!-- <p class="mockup-slider__content">Hello world! My name is</p> -->
+                    <p class="mockup-slider__title">VIOLA CHYU.</p>
+                </div>
+            </section>
+            </div>
+            <!-- Main Page End -->
+
+            <!-- About Me Page -->
+            <div class="split right hidden-panel" data-visible-target='about-page'>
+                <h1 class="backbtn">About Me</h1>
+                <!-- <a href="#" class="button">Read More</a> -->
+            </div>
+
+            <div class="scene">
+              <img src="./assets/down.png" width="20" height="20" alt="scrolldown" class="down">
+            </div>
+
+            
+        </div>
+      </div>
+    </div>
   </main>
   
   <div class="preview-wrapper" id="previews-container"></div>
 
   <!-- Scripts -->
+  <script src="js/clipboard.min.js"></script>
+  <script src="js/home.js" type="module"></script>
+
   <script src="js/gsap.min.js"></script>
   <script src="js/ScrollTrigger.min.js"></script>
   <script src="js/ScrollSmoother.min.js"></script>

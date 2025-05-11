@@ -464,6 +464,7 @@ const deactivatePreviewToCarousel = (e) => {
   gsap.set(sceneWrapper, { autoAlpha: 1 });
 
   const progress = 0.5;
+  const { rotationX, rotationY, rotationZ } = getInterpolatedRotation(progress);
 
   gsap
     .timeline({

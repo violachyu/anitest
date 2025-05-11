@@ -1,0 +1,20 @@
+[data-visible-target] {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+[data-visible-target].visible {
+  display: block;
+  opacity: 1;
+}
+
+/* Optional animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+[data-visible-target].visible {
+  animation: fadeIn 0.3s ease forwards;
+}
