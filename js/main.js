@@ -94,7 +94,11 @@ const initApp = async () => {
               <figure  class="grid__custom__item" role="img">
                 <div class="grid__custom__item-image" style="background-image: url(assets/intro_2.jpg)"></div>
                 <figcaption class="">
-                  <p class="grid__custom__item-text">${aboutCaption}</p>
+                  <p class="grid__custom__item-text">${aboutCaption}
+                    <br><br>
+                    <button class='custom-btn resume-btn'>Resume</button>
+                    <button class='custom-btn contact-btn'>Contact Me</button>
+                  </p>
                 </figcaption>
               </figure>
             </div>
