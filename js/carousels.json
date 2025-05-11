@@ -4,10 +4,10 @@
       "title": "Haute Couture Nights — Paris",
       "radius": null,
       "cells": [
-        {"img": "../assets/img1.webp"},
-        {"img": "../assets/img2.webp"},
-        {"img": "../assets/img3.webp"},
-        {"img": "../assets/img4.webp"}
+        {"img": "assets/img1.webp"},
+        {"img": "assets/img2.webp"},
+        {"img": "assets/img3.webp"},
+        {"img": "assets/img4.webp"}
       ]
     }
   ]
