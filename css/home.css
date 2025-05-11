@@ -89,8 +89,6 @@ body {
 	padding: 0 0.5em 0 0; /*TODO: padding of title*/
 }
 
-
-
 /* Mockup Slider */
 .mockup-slider {
 	font-family: 'Roboto Condensed', sans-serif;
@@ -115,7 +113,33 @@ body {
 	margin:0;
 }
 
+.split {
+    position: relative;
+    z-index: 1;
+}
+
+.nav {
+    position: relative;
+    z-index: 2000;
+    pointer-events: auto;
+}
+
 .nav__item {
+    position: relative;
+    z-index: 2000;
+    pointer-events: auto;
     cursor: url('../assets/cursor_1.png'), auto;
+}
+
+.scene {
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.down {
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
 }
 
