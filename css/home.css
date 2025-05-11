@@ -24,6 +24,7 @@
 html {
   height: 100%;
   overflow-x: hidden;
+  cursor: url('../assets/cursor_0.png'), auto;
 }
 
 body {
@@ -91,36 +92,6 @@ body {
 
 
 /* Mockup Slider */
-.mockup-slider {
-	/* position: relative; */
-	/* width: calc(100% - 12em); */
-	/* margin: 0 0 0 0em; */
-	/* max-width: 600px; */
-}
-
-.mockup-slider::before,
-.mockup-slider::after {
-	/* content: '';
-	width: 100%;
-	background: rgba(0,0,0,0.05);
-	height: 100px;
-	position: absolute;
-	top: 0; */
-}
-
-.mockup-slider::after {
-	/* top: auto;
-	bottom: 0; */
-}
-
-.mockup-slider img {
-	/* position: relative;
-	display: block;
-	max-width: 100%;
-	margin: 150px 0;
-	box-shadow: 0 10px 20px -4px rgba(0,0,0,0.6); */
-}
-
 .mockup-slider__title {
 	/* position: absolute; */ /* Edit: Display title in the center */ 
 	font-family: 'Roboto Condensed', sans-serif;
@@ -139,15 +110,7 @@ body {
 	/* padding: 0; */
 }
 
-/* .mockup-slider__subtitle {
-	position: absolute;
-	top: 70%;
-	left: -1em;
-	background: #1b3050;
-	margin: 0;
-	color: #fff;
-	font-size: 1.05em;
-	padding: 0.25em 0.5em;
-	z-index: 100;
-} */
+.nav__item {
+    cursor: url('../assets/cursor_1.png'), auto;
+}
 
