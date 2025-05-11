@@ -143,3 +143,15 @@ body {
     z-index: 1;
 }
 
+.scene__title {
+    position: relative;
+    z-index: 2000;
+    pointer-events: auto;
+    cursor: url('../assets/cursor_1.png'), auto;
+}
+
+.scene__title a {
+    pointer-events: auto;
+    cursor: url('../assets/cursor_1.png'), auto;
+}
+
