@@ -50,7 +50,11 @@
 		var swipeBtn = document.querySelectorAll('.swipebtn');
 		var backBtn = document.querySelector('.backbtn');
 		var container = document.querySelector('.swipebox');
+		const triggerElements = document.querySelectorAll('[data-toggle-visible]');
+		const targetElements = document.querySelectorAll('[data-visible-target]');
+		
 
+		// ** Swipe ** //
 		if (left && right && swipeBtn.length && container) {
 			swipeBtn.forEach(function(swipeBtn) {
 				swipeBtn.addEventListener('click', function() {
@@ -64,8 +68,34 @@
 				container.classList.remove('hover-right');
 			});
 		}
-	}
 
-	init();
+		// ** Show/ Hide ** //
+		// Initialize all targets as hidden
+		targetElements.forEach(el => {
+			el.classList.remove('visible');
+		});
+
+		triggerElements.forEach(trigger => {
+			trigger.addEventListener('click', function() {
+				const targetId = this.getAttribute('data-toggle-visible');
+				const target = document.querySelector(`[data-visible-target="${targetId}"]`);
+				
+				if (target) {
+					target.classList.toggle('visible');
+					
+					// Optional: Close when clicking outside
+					if (target.classList.contains('visible')) {
+						document.addEventListener('click', function outsideClick(e) {
+							if (!target.contains(e.target) && e.target !== trigger) {
+								target.classList.remove('visible');
+								document.removeEventListener('click', outsideClick);
+							}
+						});
+					}
+				}
+			});
+		});
+		
+	} init();
 
 })(window);
