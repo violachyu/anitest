@@ -6,8 +6,8 @@
 
 :root {
   font-size: 14px;
-  --color-text: #fff;
-  --color-bg: #0f0e0e;
+  /* --color-text: #fff; */
+  --color-bg: #000000;
   --color-link: #ffffff;
   --color-link-hover: rgba(255, 255, 255, 0.6);
   --page-padding: 0.5rem;
@@ -166,7 +166,7 @@ a {
   a,
   button {
     pointer-events: auto;
-    color: var(--color-text);
+    color: #000000;
   }
 
   .frame__title {
