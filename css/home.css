@@ -85,14 +85,14 @@ body {
 .section--intro p {
 	max-width: 1000px;
 	margin: 0 auto;
-	padding: 1em;
+	padding: 0 0.5em 0 0; /*TODO: padding of title*/
 }
 
 
 
 /* Mockup Slider */
 .mockup-slider {
-	position: relative;
+	/* position: relative; */
 	/* width: calc(100% - 12em); */
 	/* margin: 0 0 0 0em; */
 	/* max-width: 600px; */
@@ -100,32 +100,31 @@ body {
 
 .mockup-slider::before,
 .mockup-slider::after {
-	content: '';
+	/* content: '';
 	width: 100%;
 	background: rgba(0,0,0,0.05);
 	height: 100px;
 	position: absolute;
-	top: 0;
+	top: 0; */
 }
 
 .mockup-slider::after {
-	top: auto;
-	bottom: 0;
+	/* top: auto;
+	bottom: 0; */
 }
 
 .mockup-slider img {
-	position: relative;
+	/* position: relative;
 	display: block;
 	max-width: 100%;
 	margin: 150px 0;
-	box-shadow: 0 10px 20px -4px rgba(0,0,0,0.6);
+	box-shadow: 0 10px 20px -4px rgba(0,0,0,0.6); */
 }
 
 .mockup-slider__title {
 	/* position: absolute; */ /* Edit: Display title in the center */ 
 	font-family: 'Roboto Condensed', sans-serif;
 	font-weight: bold;
-	display: block;
 	text-align: right;
 	white-space: nowrap;
 	letter-spacing: 2px;

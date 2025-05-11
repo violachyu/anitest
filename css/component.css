@@ -26,7 +26,7 @@
 /* Individual styles */
 /*** Berta ***/
 .nav--berta {
-	width: 12em;
+	width: 10em; /* TODO: change if text and slider too close*/
 	margin: 0;
 }
 
