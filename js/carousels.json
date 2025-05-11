@@ -1,18 +1,18 @@
 [
     {
       "id": "preview-1",
-      "title": "Haute Couture Nights — Paris",
+      "title": "About me",
       "radius": null,
       "cells": [
-        {"img": "assets/img1.webp"},
-        {"img": "assets/img2.webp"},
-        {"img": "assets/img3.webp"},
-        {"img": "assets/img4.webp"}
+        {"img": "assets/intro_2.jpg"},
+        {"img": "assets/intro_2.jpg"},
+        {"img": "assets/intro_2.jpg"},
+        {"img": "assets/intro_2.jpg"}
       ]
     },
     {
       "id": "preview-2",
-      "title": "Haute Couture Nights — Paris",
+      "title": "Projects",
       "radius": null,
       "cells": [
         {"img": "assets/img5.webp"},

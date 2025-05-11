@@ -64,27 +64,69 @@ const initApp = async () => {
 
     // Generate previews
     const previewsContainer = document.getElementById('previews-container');
+
     previews.forEach(preview => {
       const previewDiv = document.createElement('div');
-      previewDiv.className = 'preview';
-      previewDiv.id = preview.id;
       
-      previewDiv.innerHTML = `
-        <header class="preview__header">
-          <h2 class="preview__title"><span>${preview.title}</span></h2>
-          <button class="preview__close">Close ×</button>
-        </header>
-        <div class="grid">
-          ${preview.images.map((image, index) => `
-            <figure aria-labelledby="caption${index + 1}" class="grid__item" role="img">
-              <div class="grid__item-image" style="background-image: url(${image.img})"></div>
-              <figcaption class="grid__item-caption" id="caption${index + 1}">
-                <h3>${image.caption}</h3>
-              </figcaption>
-            </figure>
-          `).join('')}
-        </div>
-      `;
+      // Custom Preview - About Me
+      if (preview.id === 'preview-1') {
+        previewDiv.className = 'preview__custom';
+        previewDiv.id = preview.id;
+
+        const aboutCaption = `Former nurse turned full-stack developer, now revolutionizing aging through playful <b>AgeTech</b>.<br>
+        I'm building a future where getting older feels like leveling up - by injecting gamification into our aging society.<br>
+        <br>
+        By day, I code. By night, I chase that perfect jazz resonance where voice and body become one.<br>
+        Through music and tech, I create experiences that move both body and soul. Let's compose the soundtrack for better aging together.<br>
+        Hit reply if you're into:<br>
+        <br>
+        → <b>AgeTech</b> innovation<br>
+        → Human-centered design<br>
+        → Music that makes tech sing`;
+        const aboutTitle = "About Me";
+
+        previewDiv.innerHTML = `
+            <header class="preview__header">
+              <h2 class="preview__title"><span>${aboutTitle}</span></h2>
+              <button class="preview__close">Close ×</button>
+            </header>
+            <div class="grid__custom">
+              <figure  class="grid__custom__item" role="img">
+                <div class="grid__custom__item-image" style="background-image: url(assets/intro_2.jpg)"></div>
+                <figcaption class="">
+                  <p class="grid__custom__item-text">${aboutCaption}
+                    <br><br>
+                    <button class='custom-btn resume-btn'>Resume</button>
+                    <button class='custom-btn contact-btn'>Contact Me</button>
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+        `;
+      } else {
+        previewDiv.className = 'preview';
+        previewDiv.id = preview.id;
+
+        // General Preview Template with 8 Grids
+        previewDiv.innerHTML = `
+          <header class="preview__header">
+            <h2 class="preview__title"><span>${preview.title}</span></h2>
+            <button class="preview__close">Close ×</button>
+          </header>
+          <div class="grid">
+            ${preview.images.map((image, index) => `
+              <figure aria-labelledby="caption${index + 1}" class="grid__item" role="img">
+                <div class="grid__item-image" style="background-image: url(${image.img})"></div>
+                <figcaption class="grid__item-caption" id="caption${index + 1}">
+                  <h3>${image.caption}</h3>
+                </figcaption>
+              </figure>
+            `).join('')}
+          </div>
+        `;
+
+      }
+
       
       previewsContainer.appendChild(previewDiv);
     });
@@ -306,7 +348,7 @@ const animateGridItems = ({ items, centerX, centerY, direction = 'in', onComplet
  * Animates all grid items in the preview into view
  */
 const animatePreviewGridIn = (preview) => {
-  const items = preview.querySelectorAll('.grid__item');
+  const items = preview.querySelectorAll('.grid__item, .grid__custom__item');
   gsap.set(items, { clearProps: 'all' });
   animateGridItems({
     items,
@@ -320,7 +362,7 @@ const animatePreviewGridIn = (preview) => {
  * Animates all grid items in the preview out of view
  */
 const animatePreviewGridOut = (preview) => {
-  const items = preview.querySelectorAll('.grid__item');
+  const items = preview.querySelectorAll('.grid__item, .grid__custom__item');
   const onComplete = () =>
     gsap.set(preview, { pointerEvents: 'none', autoAlpha: 0 });
   animateGridItems({
@@ -453,7 +495,7 @@ const deactivatePreviewToCarousel = (e) => {
   if (isAnimating) return;
   isAnimating = true;
 
-  const preview = e.currentTarget.closest('.preview');
+  const preview = e.currentTarget.closest('.preview, .preview__custom');
   if (!preview) return;
 
   const { carousel, cards, chars } = getSceneElementsFromPreview(preview);
