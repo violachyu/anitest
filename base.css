@@ -94,7 +94,6 @@ a {
   text-decoration: none;
   color: var(--color-link);
   outline: none;
-  cursor: pointer;
   transition: all 0.3s ease;
 
   &:hover {
@@ -269,6 +268,8 @@ a {
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .card__face {
@@ -572,4 +573,10 @@ a {
   background-position: 50% 50%;
   will-change: transform, clip-path;
   pointer-events: none;
+}
+
+.bootstrap-override {
+  color:#000000;
+  outline: none;
+  border-width: none;
 }
