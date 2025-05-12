@@ -220,6 +220,10 @@ a {
 
 .scene__title span {
   display: inline-block;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 2em;
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 
 .scene__title .char {
@@ -328,6 +332,15 @@ a {
   }
 }
 
+/* Apply grayscale to images in preview-2 */
+#preview-2 .grid__item-image {
+  filter: grayscale(1);
+  transition: filter 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+}
+#preview-2 .grid__item-image:hover {
+  filter: none;
+}
+
 /* Preview - Grid */
 .grid {
   padding: 1rem 0;
@@ -361,7 +374,7 @@ a {
 }
 
 .grid__item:hover .grid__item-image {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .grid__item-caption h3 {
