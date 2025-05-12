@@ -371,6 +371,7 @@ a {
   background-size: 100%;
   background-position: 50% 50%;
   transition: opacity 0.15s cubic-bezier(0.2, 0, 0.2, 1);
+  cursor: url('../assets/cursor_1.png'), auto;
 }
 
 .grid__item:hover .grid__item-image {
