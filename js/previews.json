@@ -1,0 +1,38 @@
+[
+    {
+      "id": "preview-1",
+      "title": "Haute Couture Nights — Paris",
+      "images": [
+        {"img": "assets/img1.webp", "caption": "Kai Vega"},
+        {"img": "assets/img2.webp", "caption": "Riven Juno"},
+        {"img": "assets/img3.webp", "caption": "Lex Orion"},
+        {"img": "assets/img4.webp", "caption": "Ash Kairos"},
+        {"img": "assets/img5.webp", "caption": "Juno Sol"},
+        {"img": "assets/img6.webp", "caption": "Soren Nyx"},
+        {"img": "assets/img7.webp", "caption": "Quinn Axon"},
+        {"img": "assets/img8.webp", "caption": "Zara Voss"},
+        {"img": "assets/img9.webp", "caption": "Hale B."},
+        {"img": "assets/img10.webp", "caption": "Gundra Wex"},
+        {"img": "assets/img11.webp", "caption": "Extra One"},
+        {"img": "assets/img12.webp", "caption": "Extra Two"}
+      ]
+    },
+    {
+      "id": "preview-2",
+      "title": "Projects",
+      "images": [
+        {"img": "assets/starlink_main.jpg", "caption": "Starlink", "projectName": "starlink"},
+        {"img": "assets/mastvr.jpg", "caption": "MastVR Studio"},
+        {"img": "assets/heelia.jpg", "caption": "Heelia"},
+        {"img": "assets/moveml.jpg", "caption": "MoveML"},
+        {"img": "assets/postit.jpg", "caption": "Boarder Playground"},
+        {"img": "assets/newage-2.jpg", "caption": "New Age Designer"},
+        {"img": "assets/atcargo.jpg", "caption": "ATCargo"},
+        {"img": "assets/eyecp.jpg", "caption": "EyeCP"},
+        {"img": "assets/stagepass.jpg", "caption": "StagePass"},
+        {"img": "assets/red_square_2.jpg", "caption": ""},
+        {"img": "assets/red_square_3.jpg", "caption": ""},
+        {"img": "assets/red_square_4.jpg", "caption": ""}
+      ]
+    }
+  ]
