@@ -99,7 +99,7 @@ const initApp = async () => {
         <div class="carousel">
           ${carousel.cells.map(cell => `
             <div class="carousel__cell">
-              <div class="card" style="--img: url(${cell.img})">
+              <div class="card" style="--img: url(${base}assets/${cell.img})">
                 <div class="card__face card__face--front"></div>
                 <div class="card__face card__face--back"></div>
               </div>

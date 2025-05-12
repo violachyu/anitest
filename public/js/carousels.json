@@ -4,10 +4,10 @@
       "title": "About me",
       "radius": null,
       "cells": [
-        {"img": "assets/red_square_2.jpg"},
-        {"img": "assets/red_square_3.jpg"},
-        {"img": "assets/red_square_4.jpg"},
-        {"img": "assets/red_square_5.jpg"}
+        {"img": "red_square_2.jpg"},
+        {"img": "red_square_3.jpg"},
+        {"img": "red_square_4.jpg"},
+        {"img": "red_square_5.jpg"}
       ]
     },
     {
@@ -15,10 +15,10 @@
       "title": "Projects",
       "radius": null,
       "cells": [
-        {"img": "assets/red_square.jpg"},
-        {"img": "assets/red_square_2.jpg"},
-        {"img": "assets/red_square_3.jpg"},
-        {"img": "assets/red_square_4.jpg"}
+        {"img": "red_square.jpg"},
+        {"img": "red_square_2.jpg"},
+        {"img": "red_square_3.jpg"},
+        {"img": "red_square_4.jpg"}
       ]
     }
   ]
