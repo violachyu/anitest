@@ -22,7 +22,7 @@ const splitMap = new Map();
 
 /* Panel Enlarge Behavior */
 let grid = null; // Main grid container
-let frame = null; // Frame overlays
+// let frame = null; // Frame overlays
 // const grid = document.querySelector('.grid'); // Main grid container
 // Linear interpolation helper
 const lerp = (a, b, t) => a + (b - a) * t;
