@@ -35,7 +35,7 @@ body {
 	color: var(--color-text);
 	background-color: var(--color-bg);
 	font-family: 'Roboto Condensed', sans-serif;
-	font-weight: 700;
+	font-weight: 300;
   	text-transform: uppercase;
 	letter-spacing: 2px;
 	-webkit-font-smoothing: antialiased;
@@ -159,8 +159,8 @@ a:focus-visible {
 .heading__main {
 	display: inline-block;
 	color: var(--color-heading);
-	font-weight: 300;
-	font-size: clamp(2rem,10vw,5.5rem);
+	font-weight: 300; /*TODO:  adjust project title (the very top)*/
+	font-size: clamp(2rem,10vw,5.5rem); /* Clamp: 2rem (min) 10vw (max) 5.5rem (max)*/
 	white-space: nowrap;
 	margin: 0;
 	margin-left: calc(13.25vw + 25vw + 1vw);
@@ -234,7 +234,7 @@ a:focus-visible {
 	width: min-content;
 	line-height: 1.2;
 	font-size: clamp(2rem,6vw,3.5rem);
-	font-weight: 300;
+	/* font-weight: 300; */
 	margin: 0;
 	color: var(--color-title);
 }
