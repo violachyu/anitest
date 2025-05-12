@@ -1,12 +1,12 @@
-import { preloadImages, isInViewport } from './utils';
-import { Item } from './item';
+import { preloadImages, isInViewport } from './js/utils.js';
+import { Item } from './js/item.js';
 import Lenis from '@studio-freight/lenis'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 import { Flip } from 'gsap/Flip';
 gsap.registerPlugin(Flip);
-import { projects } from './projects.js';
+import { projects } from './js/projects.js';
 
 // // Gitpage Domain
 const base = import.meta.env.BASE_URL;
