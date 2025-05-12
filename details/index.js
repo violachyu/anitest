@@ -33,8 +33,12 @@ function renderProject(projectData) {
 			<figcaption class="item__caption">
 				<span class="item__caption-number oh"><span class="oh__inner">${item.number}</span></span>
 				<h2 class="item__caption-title oh"><span class="oh__inner">${item.title}</span></h2>
+				<h2 class="item__caption-subtitle oh"><span class="oh__inner">${item.subtitle ? item.subtitle : ''}</span></h2>
 				<p class="item__caption-description">${item.description}</p>
-			</figcaption>
+                <div class="item__caption-skills">
+                    ${item.skills?.map(skill => `<a class="item__caption-skill">${skill}</a>`).join('') || ''}
+                </div>
+            </figcaption>
 			<div class="item__image-wrap">
 				<div class="item__image">
 					<div class="item__image-inner" style="background-image:url(${base}details/img/${item.image})"></div>
