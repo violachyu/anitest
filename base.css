@@ -573,16 +573,6 @@ a {
   pointer-events: none;
 }
 
-
-.frame__preview {
-  font-size: var(--font-size-l);
-  font-weight: 500;
-  display: grid;
-  z-index: 1000;
-  width: 100%;
-  position: relative;
-  grid-column-gap: var(--c-gap);
-  grid-row-gap: 0.5rem;
   pointer-events: none;
   justify-items: start;
   grid-template-columns: auto;

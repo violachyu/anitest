@@ -149,11 +149,10 @@ const initApp = async () => {
 
         // General Preview Template with 8 Grids
         previewDiv.innerHTML = `
-          <header class="preview__header frame__preview">
+          <header class="preview__header">
             <h2 class="preview__title"><span>${preview.title}</span></h2>
             <button class="preview__close">Close ×</button>
           </header>
-          <div class="heading__preview"></div>
           <div class="grid">
             ${preview.images.map((image, index) => `
               <figure aria-labelledby="caption${index + 1}" class="grid__item panel__target" role="img">
@@ -164,7 +163,6 @@ const initApp = async () => {
               </figure>
             `).join('')}
           </div>
-          <footer class="frame__preview frame__preview--footer"></footer>
         `;
 
       }
@@ -172,7 +170,7 @@ const initApp = async () => {
 
       // Add a grid & frame to the preview
       grid = previewDiv.querySelector('.grid');
-      frame = document.querySelectorAll(['.frame', '.heading']); // Frame overlays
+      // frame = document.querySelectorAll(['.frame', '.heading']); // Frame overlays
 
     });
 
@@ -827,7 +825,7 @@ const animatePanelTargets = (items, clickedItem, delays) => {
 
 // Animate the full transition (movers + panel reveal)
 const animateTransition = (startEl, endEl, imgURL) => {
-  hideFrame();
+  // hideFrame();
 
   // Generate path between start and end
   const path = generateMotionPath(
@@ -1004,7 +1002,7 @@ const resetView = () => {
       },
     })
     .to(panel, { opacity: 0 })
-    .add(showFrame, 0)
+    // .add(showFrame, 0)
     .set(panel, { opacity: 0, pointerEvents: 'none' })
     .set(panel.querySelector('.panel__img'), {
       clipPath: 'inset(0% 0% 100% 0%)',
