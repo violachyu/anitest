@@ -9,22 +9,27 @@ export const projects = {
 				title: "The Solution",
 				subtitle: "Shake It, Share It – Music in a Star!",
 				description: "Starlink is a star-shaped Bluetooth device that lets users instantly send meaningful songs to loved ones with a simple shake gesture.",
-				image: "1.jpg", //TODO: add images {img/starlink/1.jpg}
+				image: "starlink_0.jpg", //TODO: add images {img/starlink/1.jpg}
 				skills: ["CircuitPython", "Autocad Fusion", "Adafruit CLUE Board"]
 			},
 			{
 				number: "02",
 				title: "The Problem",
 				description: "Digital communication often lacks emotional depth—texts and calls fail to convey the nuanced feelings that music can express across distances.",
-				image: "2.jpg"
+				image: "starlink_1.jpg"
 			},
 			{
 				number: "03",
 				title: "The Process",
 				description: "Designed as an intuitive home accessory, users pair the star with a smartphone app, shake it to trigger song-sharing, and navigate tracks with physical buttons—turning music into a tactile emotional bridge for couples, families, and friends.",
-				image: "2.jpg"
+				image: "/starlink_2.jpg"
 			},
 		],
+		images: [
+			"starlink_0.jpg",
+			"starlink_1.jpg",
+			"starlink_2.jpg"
+		]
 	},
 	vrstudio: {
 		headingMain: `Project: VR Studio * Project: VR Studio * Project: VR Studio *`,

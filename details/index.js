@@ -28,6 +28,7 @@ function renderProject(projectData) {
 	projectData.items.forEach(item => {
 		const figure = document.createElement("figure");
 		figure.className = "item";
+        console.log(`Image Path:${base}details/img/${item.image}`)
 
 		figure.innerHTML = `
 			<figcaption class="item__caption">
@@ -41,7 +42,7 @@ function renderProject(projectData) {
             </figcaption>
 			<div class="item__image-wrap">
 				<div class="item__image">
-					<div class="item__image-inner" style="background-image:url(${base}details/img/${item.image})"></div>
+					<div class="item__image-inner" style="background-image:url(${base}img/${item.image})"></div>
 				</div>
 			</div>
 		`;
