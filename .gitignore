@@ -1,5 +1,7 @@
 #binary
 .DS_Store
+
+archive/
 # Logs
 logs
 *.log
