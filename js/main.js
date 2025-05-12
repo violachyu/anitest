@@ -4,6 +4,11 @@ import { preloadImages } from './utils.js';
 const gitpagePath = "anitest"; //TODO: change domain
 
 // Register the GSAP plugins
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollSmoother } from 'gsap/ScrollSmoother';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { SplitText } from 'gsap/SplitText';
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin, SplitText);
 
 // Initialize GSAP's ScrollSmoother for smooth scrolling and scroll-based effects
