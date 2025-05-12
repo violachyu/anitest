@@ -1,5 +1,5 @@
 {
-  "name": "OnScrollViewSwitch",
+  "name": "vio-anitest",
   "version": "1.0.0",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "description": "",
@@ -10,15 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/codrops/OnScrollViewSwitch.git"
+    "url": "git://github.com/violachyu/anitest.git"
   },
   "keywords": [],
   "author": "Codrops",
   "license": "MIT",
-  "homepage": "https://tympanus.net/codrops",
-  "bugs": {
-    "url": "https://github.com/codrops/OnScrollViewSwitch/issues"
-  },
+  "homepage": "https://violachyu.github.io/anitest/",
   "devDependencies": {
     "gh-pages": "^6.3.0",
     "vite": "^5.4.10"
