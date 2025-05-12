@@ -169,7 +169,7 @@ const initApp = async () => {
       previewsContainer.appendChild(previewDiv);
 
       // Add a grid & frame to the preview
-      grid = previewDiv.querySelector('.grid');
+      // grid = previewDiv.querySelector('.grid');
       // frame = document.querySelectorAll(['.frame', '.heading']); // Frame overlays
 
     });
@@ -1036,17 +1036,17 @@ const initEventListeners = () => {
   });
 
   
-  /* Panel Enlarge Behavior */
-  document.querySelectorAll('.panel__target').forEach((item) => {
-    item.addEventListener('click', () => onGridItemClick(item));
-  });
-  // Attach click handler to the panel close link
-  panelContent
-    .querySelector('.panel__close')
-    ?.addEventListener('click', (e) => {
-      e.preventDefault();
-      resetView();
-    });
+  // /* Panel Enlarge Behavior */
+  // document.querySelectorAll('.panel__target').forEach((item) => {
+  //   item.addEventListener('click', () => onGridItemClick(item));
+  // });
+  // // Attach click handler to the panel close link
+  // panelContent
+  //   .querySelector('.panel__close')
+  //   ?.addEventListener('click', (e) => {
+  //     e.preventDefault();
+  //     resetView();
+  //   });
 
 };
 
