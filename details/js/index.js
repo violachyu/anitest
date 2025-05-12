@@ -8,6 +8,9 @@ import { Flip } from 'gsap/Flip';
 gsap.registerPlugin(Flip);
 import { projects } from './projects.js';
 
+// // Gitpage Domain
+const base = import.meta.env.BASE_URL;
+
 /* Project Details */
 function getQueryParam(param) {
 	const urlParams = new URLSearchParams(window.location.search);
@@ -34,7 +37,7 @@ function renderProject(projectData) {
 			</figcaption>
 			<div class="item__image-wrap">
 				<div class="item__image">
-					<div class="item__image-inner" style="background-image:url(${item.image})"></div>
+					<div class="item__image-inner" style="background-image:url(${base}details/img/${item.image})"></div>
 				</div>
 			</div>
 		`;

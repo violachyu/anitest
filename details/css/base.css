@@ -36,7 +36,6 @@ body {
 	background-color: var(--color-bg);
 	font-family: 'Roboto Condensed', sans-serif;
 	font-weight: 300;
-  	text-transform: uppercase;
 	letter-spacing: 2px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -240,12 +239,18 @@ a:focus-visible {
 }
 
 .item__caption-description {
-	max-width: 200px;
+	max-width: 300px;
 	line-height: 1.2;
+
 }
 
 .item__caption-number {
 	display: inline-block;
+}
+
+.item__caption-subtitle {
+	color: var(--color-title); 
+	font-size: 2rem;
 }
 
 .grid {
