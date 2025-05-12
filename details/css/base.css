@@ -11,6 +11,7 @@
 	--letter-spacing: 2px; */
 	--color-text: #ffe7db;
 	--color-title: #e53e30;
+	--color-subtitle:#944d3e;
 	--color-bg: #080808;
 	--color-link: #ffe7db;
 	--color-link-hover: #ffe7db;
@@ -249,10 +250,26 @@ a:focus-visible {
 }
 
 .item__caption-subtitle {
-	color: var(--color-title); 
+	color: var(--color-subtitle); 
 	font-size: 2rem;
 }
 
+.item__caption-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em; /* optional: space between skills */
+}
+
+.item__caption-skill {
+	font-weight: 400;
+	font-size: 0.8rem;
+  border-radius: 20px;
+  padding: 0.25em 0.5em;
+  background-color: var(--color-subtitle);
+  margin-bottom: 0.25em; /* optional: vertical space between lines */
+}
+
+/* Grid */
 .grid {
 	width: 100%;
 	pointer-events: none;
