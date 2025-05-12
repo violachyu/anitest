@@ -156,10 +156,12 @@ const initApp = async () => {
           <div class="grid">
             ${preview.images.map((image, index) => `
               <figure aria-labelledby="caption${index + 1}" class="grid__item panel__target" role="img">
-                <div class="grid__item-image " style="background-image: url(${image.img})"></div>
+              <a href="${image.link}" target="_blank">
+                <div class="grid__item-image" style="background-image: url(${image.img})"></div>
                 <figcaption class="grid__item-caption" id="caption${index + 1}">
-                  <h3>${image.caption}</h3>
+                  <h3><b>${image.caption}</h3></b>
                 </figcaption>
+                </a>
               </figure>
             `).join('')}
           </div>
