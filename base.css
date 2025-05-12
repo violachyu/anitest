@@ -20,6 +20,8 @@
   --border-radius: 4px;
   --panel-gap: 1rem;
   --panel-img-size: calc((100vh - var(--page-padding) * 2) * 4 / 5 - var(--panel-gap));
+  --cursor: url('/assets/cursor_0.png'), auto;
+  --cursor--hover: url('/assets/cursor_1.png'), auto;
 }
 
 html {
@@ -216,7 +218,7 @@ a {
 
 .scene__title a {
   display: block;
-  cursor: url('../assets/cursor_1.png'), auto;
+  cursor: var(--cursor--hover);
 }
 
 .scene__title span {
@@ -326,7 +328,7 @@ a {
   padding: 0;
   margin: 0;
   font: inherit;
-  cursor: url('../assets/cursor_1.png'), auto;
+  cursor: var(--cursor--hover);
   color: var(--color-close);
   &:hover,
   &:focus {
@@ -374,7 +376,7 @@ a {
   background-size: 100%;
   background-position: 50% 50%;
   transition: opacity 0.15s cubic-bezier(0.2, 0, 0.2, 1);
-  cursor: url('../assets/cursor_1.png'), auto;
+  cursor: var(--cursor--hover);
 }
 
 .grid__item:hover .grid__item-image {
@@ -460,7 +462,7 @@ a {
   border-radius: 0.1em;
   padding: 0.2em 1em;
   margin: 0.5em 0.5em 0 0;
-  cursor: url('../assets/cursor_1.png'), auto;
+  cursor: var(--cursor--hover);
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
