@@ -22,17 +22,17 @@
       "title": "Projects",
       "images": [
         {"img": "assets/starlink_main.jpg", "caption": "Starlink", "projectName": "starlink"},
-        {"img": "assets/mastvr.jpg", "caption": "MastVR Studio"},
-        {"img": "assets/heelia.jpg", "caption": "Heelia"},
-        {"img": "assets/moveml.jpg", "caption": "MoveML"},
-        {"img": "assets/postit.jpg", "caption": "Boarder Playground"},
-        {"img": "assets/newage-2.jpg", "caption": "New Age Designer"},
-        {"img": "assets/atcargo.jpg", "caption": "ATCargo"},
-        {"img": "assets/eyecp.jpg", "caption": "EyeCP"},
-        {"img": "assets/stagepass.jpg", "caption": "StagePass"},
-        {"img": "assets/red_square_2.jpg", "caption": ""},
-        {"img": "assets/red_square_3.jpg", "caption": ""},
-        {"img": "assets/red_square_4.jpg", "caption": ""}
+        {"img": "assets/mastvr.jpg", "caption": "MastVR Studio","projectName": "vrstudio"},
+        {"img": "assets/heelia.jpg", "caption": "Heelia","projectName": "heelia"},
+        {"img": "assets/moveml.jpg", "caption": "MoveML","projectName": "moveml"},
+        {"img": "assets/postit.jpg", "caption": "Boarder Playground","projectName": "boarder"},
+        {"img": "assets/newage-2.jpg", "caption": "New Age Designer","projectName": "newage"},
+        {"img": "assets/atcargo.jpg", "caption": "ATCargo","projectName": "atcargo"},
+        {"img": "assets/eyecp.jpg", "caption": "EyeCP","projectName": "eyecp"},
+        {"img": "assets/stagepass.jpg", "caption": "StagePass","projectName": "stagepass"},
+        {"img": "assets/red_square_2.jpg", "caption": "","projectName": ""},
+        {"img": "assets/red_square_3.jpg", "caption": "","projectName": ""},
+        {"img": "assets/red_square_4.jpg", "caption": "","projectName": ""}
       ]
     }
   ]
