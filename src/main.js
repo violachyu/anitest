@@ -1,8 +1,16 @@
 // Import utility function for preloading images
 import { preloadImages } from './utils.js';
+// // Gitpage Domain
+const base = import.meta.env.BASE_URL;
 
 // Register the GSAP plugins
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollSmoother } from 'gsap/ScrollSmoother';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { SplitText } from 'gsap/SplitText';
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin, SplitText);
+console.log("GSAP is registered", ScrollTrigger, ScrollSmoother, ScrollToPlugin, SplitText);
 
 // Initialize GSAP's ScrollSmoother for smooth scrolling and scroll-based effects
 const smoother = ScrollSmoother.create({
@@ -66,9 +74,10 @@ const initApp = async () => {
   try {
     /* Carousel and Previews */
     // Load JSON data
+    console.log(`${base}js/carousels.json`);
     const [carouselsResponse, previewsResponse] = await Promise.all([
-      fetch('js/carousels.json'),
-      fetch('js/previews.json')
+      fetch(`${base}js/carousels.json`),
+      fetch(`${base}js/previews.json`)
     ]);
     
     const carousels = await carouselsResponse.json();
@@ -90,7 +99,7 @@ const initApp = async () => {
         <div class="carousel">
           ${carousel.cells.map(cell => `
             <div class="carousel__cell">
-              <div class="card" style="--img: url(${cell.img})">
+              <div class="card" style="--img: url(${base}assets/${cell.img})">
                 <div class="card__face card__face--front"></div>
                 <div class="card__face card__face--back"></div>
               </div>
@@ -156,7 +165,7 @@ const initApp = async () => {
           <div class="grid">
             ${preview.images.map((image, index) => `
               <figure aria-labelledby="caption${index + 1}" class="grid__item panel__target" role="img">
-              <a href="${image.link}" target="_blank">
+              <a href="${base}details/index.html?project=${image.projectName}" target="_blank">
                 <div class="grid__item-image" style="background-image: url(${image.img})"></div>
                 <figcaption class="grid__item-caption" id="caption${index + 1}">
                   <h3><b>${image.caption}</h3></b>

@@ -1,3 +1,4 @@
+import imagesLoaded from 'imagesloaded';
 /**
  * Preloads images specified by the CSS selector.
  * @function

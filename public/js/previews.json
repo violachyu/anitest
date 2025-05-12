@@ -21,7 +21,7 @@
       "id": "preview-2",
       "title": "Projects",
       "images": [
-        {"img": "assets/starlink_main.jpg", "caption": "Starlink", "link": "https://www.starlink.com/"},
+        {"img": "assets/starlink_main.jpg", "caption": "Starlink", "projectName": "starlink"},
         {"img": "assets/mastvr.jpg", "caption": "MastVR Studio"},
         {"img": "assets/heelia.jpg", "caption": "Heelia"},
         {"img": "assets/moveml.jpg", "caption": "MoveML"},

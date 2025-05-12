@@ -1,11 +1,58 @@
-import { preloadImages, isInViewport } from './utils';
-import { Item } from './item';
+import { preloadImages, isInViewport } from './js/utils.js';
+import { Item } from './js/item.js';
 import Lenis from '@studio-freight/lenis'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 import { Flip } from 'gsap/Flip';
 gsap.registerPlugin(Flip);
+import { projects } from './js/projects.js';
+
+// // Gitpage Domain
+const base = import.meta.env.BASE_URL;
+
+/* Project Details */
+function getQueryParam(param) {
+	const urlParams = new URLSearchParams(window.location.search);
+	return urlParams.get(param);
+}
+
+function renderProject(projectData) {
+    console.log(projectData);
+	// Set heading
+	document.getElementById("headingMain").textContent = projectData.headingMain;
+	document.getElementById("headingSub").textContent = projectData.headingSub;
+
+	// Generate items
+	const contentContainer = document.getElementById("contentContainer");
+	projectData.items.forEach(item => {
+		const figure = document.createElement("figure");
+		figure.className = "item";
+
+		figure.innerHTML = `
+			<figcaption class="item__caption">
+				<span class="item__caption-number oh"><span class="oh__inner">${item.number}</span></span>
+				<h2 class="item__caption-title oh"><span class="oh__inner">${item.title}</span></h2>
+				<p class="item__caption-description">${item.description}</p>
+			</figcaption>
+			<div class="item__image-wrap">
+				<div class="item__image">
+					<div class="item__image-inner" style="background-image:url(${base}details/img/${item.image})"></div>
+				</div>
+			</div>
+		`;
+
+		contentContainer.appendChild(figure);
+	});
+}
+
+const projectKey = getQueryParam("project");
+if (projects[projectKey]) {
+	renderProject(projects[projectKey]);
+} else {
+	console.warn("Project not found. Falling back to default.");
+}
+
 
 // Item instances (Item is the .content > figure.item)
 const items = [];
@@ -259,18 +306,18 @@ const getDOMElements = () => {
 // Initialize the events
 const initEvents = () => {
 
-    // show grid ctrl click
-    switchCtrl.grid.addEventListener('click', () => {
-        switchCtrl.grid.classList.add('switch__button--hidden', 'switch__button--current');
-        switchCtrl.list.classList.remove('switch__button--hidden', 'switch__button--current');
-        showGrid();
-    });
-    // hide grid ctrl click
-    switchCtrl.list.addEventListener('click', () => {
-        switchCtrl.list.classList.add('switch__button--hidden', 'switch__button--current');
-        switchCtrl.grid.classList.remove('switch__button--hidden', 'switch__button--current');
-        hideGrid();
-    });
+    // // show grid ctrl click
+    // switchCtrl.grid.addEventListener('click', () => {
+    //     switchCtrl.grid.classList.add('switch__button--hidden', 'switch__button--current');
+    //     switchCtrl.list.classList.remove('switch__button--hidden', 'switch__button--current');
+    //     showGrid();
+    // });
+    // // hide grid ctrl click
+    // switchCtrl.list.addEventListener('click', () => {
+    //     switchCtrl.list.classList.add('switch__button--hidden', 'switch__button--current');
+    //     switchCtrl.grid.classList.remove('switch__button--hidden', 'switch__button--current');
+    //     hideGrid();
+    // });
 
 };
 
