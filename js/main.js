@@ -21,17 +21,17 @@ let isAnimating = false;
 const splitMap = new Map();
 
 /* Panel Enlarge Behavior */
-let grid = null; // Main grid container
+// let grid = null; // Main grid container
 // let frame = null; // Frame overlays
 // const grid = document.querySelector('.grid'); // Main grid container
 // Linear interpolation helper
-const lerp = (a, b, t) => a + (b - a) * t;
+// const lerp = (a, b, t) => a + (b - a) * t;
 // const frame = document.querySelectorAll(['.frame', '.heading']); // Frame overlays
-const panel = document.querySelector('.panel'); // Panel container
-const panelContent = panel.querySelector('.panel__content'); // Panel content
+// const panel = document.querySelector('.panel'); // Panel container
+// const panelContent = panel.querySelector('.panel__content'); // Panel content
 // let isAnimating = false; // Prevents overlapping animations
-let isPanelOpen = false; // Tracks if the panel is currently open
-let currentItem = null; // Reference to the clicked item
+// let isPanelOpen = false; // Tracks if the panel is currently open
+// let currentItem = null; // Reference to the clicked item
  // Configuration object for animation settings
 const config = {
   clipPathDirection: 'top-bottom', // Direction of clip-path animation ('top-bottom', 'bottom-top', 'left-right', 'right-left')
